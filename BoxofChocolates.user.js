@@ -7,11 +7,13 @@
 // @grant         none
 // ==/UserScript==
 
-var code_elems = document.getElementsByTag('code');
+var code_elems = document.getElementsByTagName('code');
 
 var add_to_box = document.createElement('span');
 var atb_text = document.createTextNode('(Add to Box)');
 add_to_box.appendChild(atb_text);
+add_to_box.style.fontSize = '50%';
+add_to_box.style.cssFloat = 'right';
 
 for (var i = 0; i < code_elems.length; i++) {
     var ce = code_elems[i];
